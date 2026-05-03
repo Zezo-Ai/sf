@@ -693,10 +693,6 @@ register_all_s3_methods = function() {
 	s3_register("dplyr::semi_join", "sf")
 	s3_register("dplyr::slice", "sf")
 	s3_register("dplyr::summarise", "sf")
-<<<<<<< HEAD
-	s3_register("dplyr::count", "sf")
-=======
->>>>>>> nocount
 	s3_register("dplyr::transmute", "sf")
 	s3_register("dplyr::ungroup", "sf")
 	s3_register("tidyr::drop_na", "sf")
