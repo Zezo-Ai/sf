@@ -364,14 +364,6 @@ count.sf <- function(x, ..., wt = NULL, sort = FALSE, name = "n") {
 }
 
 #' @name tidyverse
-tally.sf <- function(x, ..., wt = NULL, sort = FALSE, name = "n") {
-	x <- st_drop_geometry(x)
-	if (!requireNamespace("dplyr", quietly = TRUE))
-		stop("dplyr required: install that first") # nocov
-	NextMethod()
-}
-
-#' @name tidyverse
 #' @param .keep_all see corresponding function in dplyr
 #' @param exact logical; if `TRUE` use \link{st_equals_exact} for geometry comparisons
 #' @param par numeric; passed on to \link{st_equals_exact}
@@ -722,7 +714,6 @@ register_all_s3_methods = function() {
 	s3_register("dplyr::slice", "sf")
 	s3_register("dplyr::summarise", "sf")
 	s3_register("dplyr::count", "sf")
-	s3_register("dplyr::tally", "sf")
 	s3_register("dplyr::transmute", "sf")
 	s3_register("dplyr::ungroup", "sf")
 	s3_register("tidyr::drop_na", "sf")

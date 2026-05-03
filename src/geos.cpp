@@ -107,10 +107,10 @@ static void __countErrorHandler(const char *fmt, void *userdata) {
 
 static void __emptyNoticeHandler(const char *fmt, void *userdata) { }
 
+#ifdef GEOS350
 static void __checkInterruptFn(void*) {
 	R_CheckUserInterrupt();
 }
-
 
 static void __checkInterrupt() {
 	// Adapted from Rcpp/Interrupt.h
@@ -119,7 +119,7 @@ static void __checkInterrupt() {
 	}
 }
 // #nocov end
-
+#endif
 
 // from terra:
 static void __warningIgnore(const char *fmt, ...) {

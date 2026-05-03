@@ -16,7 +16,6 @@
 \alias{summarise.sf}
 \alias{summarise}
 \alias{count.sf}
-\alias{tally.sf}
 \alias{distinct.sf}
 \alias{gather.sf}
 \alias{pivot_longer.sf}
@@ -64,8 +63,6 @@ slice.sf(.data, ..., .dots)
 summarise.sf(.data, ..., .dots, do_union = TRUE, is_coverage = FALSE)
 
 count.sf(x, ..., wt = NULL, sort = FALSE, name = "n")
-
-tally.sf(x, ..., wt = NULL, sort = FALSE, name = "n")
 
 distinct.sf(.data, ..., .keep_all = FALSE, exact = FALSE, par = 0)
 
